@@ -1,4 +1,4 @@
-package watermark
+package main
 
 import (
 	"image"
@@ -13,7 +13,7 @@ func main() {
 	img, _ := jpeg.Decode(imgb)
 	defer imgb.Close()
 
-	wmb, _ := os.Open("watermark_opacity.png")
+	wmb, _ := os.Open("watermark.png")
 	watermark, _ := png.Decode(wmb)
 	defer wmb.Close()
 
